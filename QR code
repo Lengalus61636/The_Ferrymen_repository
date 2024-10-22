@@ -1,0 +1,16 @@
+#My firts QR
+
+import qrcode
+
+url = "https://open.spotify.com/intl-es/artist/5RoXeJ9Q3LNmeS4cDcAg5b"
+
+qr = qrcode.QRCcode(
+version=1,
+box_size=25,
+border=5
+)
+
+qr.add_data(url)
+qr.make(fit=True)
+
+imagen = qr.make_image()
